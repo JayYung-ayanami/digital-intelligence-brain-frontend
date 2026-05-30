@@ -15,6 +15,15 @@
     "format": "prettier --write --experimental-cli src/",
     "prepare": "husky"
   },
+  "lint-staged": {
+    "src/**/*.{js,ts,vue}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "src/**/*.{css,scss,less,html}": [
+      "prettier --write"
+    ]
+  },
   "dependencies": {
     "@element-plus/icons-vue": "^2.3.2",
     "echarts": "^6.1.0",
@@ -37,6 +46,7 @@
     "eslint-plugin-vue": "~10.8.0",
     "husky": "^9.1.7",
     "jiti": "^2.6.1",
+    "lint-staged": "^16.4.0",
     "npm-run-all2": "^8.0.4",
     "oxlint": "~1.60.0",
     "prettier": "3.8.3",
